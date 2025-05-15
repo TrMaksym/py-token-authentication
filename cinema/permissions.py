@@ -5,4 +5,4 @@ class IsAdminAllORIsAuthenticatedOrReadOnly(BasePermission):
     def has_permission(self, request, view):
         if request.method in SAFE_METHODS:
             return True
-        return request.user and (request.user.is_authenticated or request.user.is_staff)
+        return request.user and request.user.is_staff

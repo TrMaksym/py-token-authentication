@@ -7,5 +7,4 @@ urlpatterns = [
     path("api/cinema/", include("cinema.urls", namespace="cinema")),
     path("api/cinema/user/", include("user.urls", namespace="user")),
     path("__debug__/", include("debug_toolbar.urls")),
-    path("login/", views.obtain_auth_token, name="token"),
 ]
